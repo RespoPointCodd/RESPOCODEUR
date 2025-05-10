@@ -1,15 +1,330 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfolio et blog de WILFRED DJIKIAKAM (RESPO_CODEUR) - Développeur spécialisé en C# et HTML avec 3 ans d'expérience" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio et blog de WILFRED DJIKIAKAM (RESPO_CODEUR) - Développeur spécialisé en C# et HTML avec 3 ans d'expérience">
     <title>RESPO_CODEUR | Portfolio & Blog</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <span class="brand-text">
+                    <span class="text-primary">RESPO</span>
+                    <span class="text-warning">_CODEUR</span>
+                </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h1 class="display-4 fw-bold mb-4">
+                        Bonjour, je suis<br>
+                        <span class="text-primary">WILFRED</span>
+                        <span class="text-warning">DJIKIAKAM</span>
+                    </h1>
+                    <div class="mb-4">
+                        <span>Je suis </span>
+                        <span id="typed-text" class="fw-bold"></span>
+                    </div>
+                    <p class="lead mb-4">
+                        <span class="text-gradient fw-medium fs-4 d-block mb-2">
+                            "du code propre, des idées simples, des solutions efficaces"
+                        </span>
+                        Avec 3 ans d'expérience, je développe des solutions numériques adaptées à vos besoins.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#portfolio" class="btn btn-primary btn-lg">Voir mon travail</a>
+                        <a href="#contact" class="btn btn-outline-light btn-lg">Me contacter</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block" data-aos="fade-left">
+                    <div class="hero-image-container">
+                        <img src="images/profile.jpg" alt="WILFRED DJIKIAKAM" class="img-fluid rounded-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-shapes">
+            <div class="shape-1"></div>
+            <div class="shape-2"></div>
+            <div class="shape-3"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">À Propos de Moi</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                    <div class="about-image">
+                        <img src="images/about.jpg" alt="WILFRED DJIKIAKAM" class="img-fluid rounded-3">
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h3 class="mb-4">
+                        <span class="text-primary">RESPO</span>
+                        <span class="text-warning">_CODEUR</span>
+                    </h3>
+                    <p class="lead mb-4">
+                        Je suis un développeur camerounais âgé de 27 ans, passionné par la création 
+                        de solutions numériques efficaces et adaptées aux besoins de mes clients.
+                    </p>
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-6">
+                            <div class="feature-item">
+                                <i class="bi bi-code-slash"></i>
+                                <h4>Compétences</h4>
+                                <p>C#, HTML, MySQL, Word, Excel</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-item">
+                                <i class="bi bi-mortarboard"></i>
+                                <h4>Formation</h4>
+                                <p>Master 1, Institut Universitaire des Leaders</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Mes Services</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="bi bi-pc-display"></i>
+                        </div>
+                        <h3>Applications WinForm</h3>
+                        <p>Développement d'applications Windows Forms personnalisées pour vos besoins métier.</p>
+                    </div>
+                </div>
+                <!-- More service cards... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section-padding bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Portfolio</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="portfolio-item">
+                        <img src="images/portfolio/myscc.jpg" alt="MySCC Application" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <h4>MySCC Application</h4>
+                            <p>Application WinForm</p>
+                            <a href="#" class="btn btn-primary btn-sm">Voir détails</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- More portfolio items... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Blog</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="blog-card">
+                        <img src="images/blog/csharp.jpg" alt="Les bases du développement C#" class="img-fluid">
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="bi bi-calendar"></i> 10 Mai 2025</span>
+                                <span><i class="bi bi-tag"></i> C#</span>
+                            </div>
+                            <h3>Les bases du développement C#</h3>
+                            <p>Découvrez les fondamentaux du développement en C# et pourquoi c'est un excellent langage pour débuter.</p>
+                            <a href="#" class="btn btn-link">Lire plus</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- More blog cards... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Contact</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="contact-info">
+                        <h3 class="mb-4">Restons en Contact</h3>
+                        <p class="mb-4">Je suis disponible 24/24 pour répondre à vos questions et discuter de vos projets.</p>
+                        <div class="contact-item">
+                            <i class="bi bi-phone"></i>
+                            <div>
+                                <h4>Téléphone</h4>
+                                <p>+237 672922360</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="bi bi-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>respopointcodd@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="bi bi-geo-alt"></i>
+                            <div>
+                                <h4>Adresse</h4>
+                                <p>Douala, Bonaberie-Bonassa<br>Cameroun</p>
+                            </div>
+                        </div>
+                        <div class="social-links mt-4">
+                            <a href="https://facebook.com/respocodeur" class="facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="https://twitter.com/wilfred_djikiakam" class="twitter"><i class="bi bi-twitter"></i></a>
+                            <a href="https://instagram.com/wilfred_djikiakam" class="instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="https://linkedin.com/in/wilfred-djikiakam" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <form id="contactForm" class="contact-form">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Votre nom" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Votre email" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Sujet" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Envoyer le Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white">
+        <div class="container py-5">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h3 class="mb-4">
+                        <span class="text-primary">RESPO</span>
+                        <span class="text-warning">_CODEUR</span>
+                    </h3>
+                    <p>du code propre, des idées simples, des solutions efficaces</p>
+                </div>
+                <div class="col-lg-4">
+                    <h4 class="mb-4">Liens Rapides</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h4 class="mb-4">Contact</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-geo-alt"></i> Douala, Bonaberie-Bonassa, Cameroun</li>
+                        <li><i class="bi bi-envelope"></i> respopointcodd@gmail.com</li>
+                        <li><i class="bi bi-phone"></i> +237 672922360</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom py-3">
+            <div class="container text-center">
+                <p class="mb-0">&copy; 2025 RESPO_CODEUR. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
 </html>
